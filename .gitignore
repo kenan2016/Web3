@@ -1,7 +1,9 @@
 
 .DS_Store
-.idea/aws.xml
-.idea/misc.xml
-.idea/modules.xml
-.idea/vcs.xml
-.idea/Web3.iml
+.idea/*.xml
+*.pb
+*.iml
+.idea/sonarlint/issuestore/8/3/83e46442f56bc9d64d89c4225caedfb13ffc6e5c
+.idea/sonarlint/issuestore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
+.idea/sonarlint/securityhotspotstore/8/3/83e46442f56bc9d64d89c4225caedfb13ffc6e5c
+.idea/sonarlint/securityhotspotstore/8/e/8ec9a00bfd09b3190ac6b22251dbb1aa95a0579d
