@@ -43,5 +43,5 @@ contract ArrayAndStruct{
     }
     function initPersonkeyVal() pun;oc external{
         p1 = Person1({age: 20, name: "Tom"});
-    }
+    }   
 }
