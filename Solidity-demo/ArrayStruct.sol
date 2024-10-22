@@ -41,7 +41,5 @@ contract ArrayAndStruct{
     function constructorFunc() external{
       p1 = Person1(20, "Tom");
     }
-    function initPersonkeyVal() pun;oc external{
-        p1 = Person1({age: 20, name: "Tom"});
-    }   
+  
 }
