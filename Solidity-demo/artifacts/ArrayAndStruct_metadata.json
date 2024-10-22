@@ -1,0 +1,94 @@
+{
+	"compiler": {
+		"version": "0.8.22+commit.4fc1097e"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [],
+				"name": "arrFunc",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "constructorFunc",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "f",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "uint256[3]",
+						"name": "_data",
+						"type": "uint256[3]"
+					}
+				],
+				"name": "g",
+				"outputs": [],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initPerson",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "initPerson2",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"Users/nanke/workSpace/Web3/Solidity-demo/ArrayStruct.sol": "ArrayAndStruct"
+		},
+		"evmVersion": "shanghai",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"Users/nanke/workSpace/Web3/Solidity-demo/ArrayStruct.sol": {
+			"keccak256": "0x08d1653a975516f563a7a0ec3553300dd3dcec096f3157bef4e8de309b8e25b7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7ea08032e19a04c4f3347eed7e62ba7ef3da936a2f97e85bb48523f72aeab711",
+				"dweb:/ipfs/QmVLnUv6UWAMyvPRVNnetSsH7uVtXaPQ5wq9p9bJKRYZHB"
+			]
+		}
+	},
+	"version": 1
+}
