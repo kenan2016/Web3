@@ -1,0 +1,84 @@
+{
+	"compiler": {
+		"version": "0.8.26+commit.8a97fa7a"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"inputs": [
+					{
+						"internalType": "int256",
+						"name": "_in",
+						"type": "int256"
+					}
+				],
+				"name": "getNum",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "_out",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			},
+			{
+				"inputs": [
+					{
+						"internalType": "int8",
+						"name": "_in",
+						"type": "int8"
+					}
+				],
+				"name": "getNum",
+				"outputs": [
+					{
+						"internalType": "int256",
+						"name": "_out",
+						"type": "int256"
+					}
+				],
+				"stateMutability": "pure",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"wtf-solidity/FunctionOverLoad.sol": "FunOverload"
+		},
+		"evmVersion": "cancun",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"wtf-solidity/FunctionOverLoad.sol": {
+			"keccak256": "0x4dbc8978bd63397e76b1ef4fc24e9de2162bd22bbecb75646ece30f01eceb409",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://454b6f0b234bae01df22e7353de6109fa6d3da118b7cd4a034fd97ea4e009fa5",
+				"dweb:/ipfs/QmewgREhMSgJzYgMXXYKdfeVgmvRV2SLEq8NzBGH5utCFi"
+			]
+		}
+	},
+	"version": 1
+}
