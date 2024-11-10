@@ -4,14 +4,19 @@ import (
 	"fmt"
 	"github.com/gin-gonic/gin"
 	"go-ranking/common"
+	"go-ranking/models"
 	"go-ranking/pkg/logger"
+	"strconv"
 )
 
 type UserControllerStruct struct {
 }
 
 func (u UserControllerStruct) GetUserInfo(c *gin.Context) {
-	common.Failed(4004, c, "没有相关信息")
+	var idStr = c.PostForm("id")
+	id, _ := strconv.Atoi(idStr)
+	user, _ := models.User{}.GetTest(id)
+	common.Succeed(1, c, user, 1, "获取用户信息成功")
 }
 
 func (u UserControllerStruct) CreateUser(context *gin.Context) {
