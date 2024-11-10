@@ -1,0 +1,80 @@
+panic error time:2024-11-10 14:46:21
+runtime error: integer divide by zero
+stacktrace from panic:goroutine 7 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+go-ranking/pkg/logger.Recover.func1()
+	/Users/nanke/workSpace/Go简明教程/go-ranking/pkg/logger/logger.go:138 +0x424
+panic({0x100eea280?, 0x1011fd210?})
+	/usr/local/go/src/runtime/panic.go:785 +0xf0
+go-ranking/controller.UserControllerStruct.CreateUser({}, 0x140001b8100)
+	/Users/nanke/workSpace/Go简明教程/go-ranking/controller/User.go:24 +0x30
+github.com/gin-gonic/gin.(*Context).Next(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+go-ranking/pkg/logger.Recover(0x140001b8100)
+	/Users/nanke/workSpace/Go简明教程/go-ranking/pkg/logger/logger.go:148 +0x8c
+github.com/gin-gonic/gin.(*Context).Next(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x10c
+github.com/gin-gonic/gin.(*Context).Next(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x1400011d040, 0x140001b8100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x36c
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x1400011d040, {0x100f6a7f8, 0x1400014a460}, 0x1400018a8c0)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0xc0
+net/http.serverHandler.ServeHTTP({0x140001c6000}, {0x100f6a7f8, 0x1400014a460}, 0x1400018a8c0)
+	/usr/local/go/src/net/http/server.go:3210 +0x2b0
+net/http.(*conn).serve(0x140001742d0, {0x100f6b1f8, 0x1400003c820})
+	/usr/local/go/src/net/http/server.go:2092 +0x1604
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x88c
+
+panic error time:2024-11-10 16:19:35
+runtime error: integer divide by zero
+stacktrace from panic:goroutine 35 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+go-ranking/pkg/logger.Recover.func1()
+	/Users/nanke/workSpace/Go简明教程/go-ranking/pkg/logger/logger.go:138 +0x424
+panic({0x10525e2e0?, 0x105575230?})
+	/usr/local/go/src/runtime/panic.go:785 +0xf0
+go-ranking/controller.UserControllerStruct.CreateUser({}, 0x140001ec100)
+	/Users/nanke/workSpace/Go简明教程/go-ranking/controller/User.go:26 +0x4c
+github.com/gin-gonic/gin.(*Context).Next(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+go-ranking/pkg/logger.Recover(0x140001ec100)
+	/Users/nanke/workSpace/Go简明教程/go-ranking/pkg/logger/logger.go:148 +0x8c
+github.com/gin-gonic/gin.(*Context).Next(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x10c
+github.com/gin-gonic/gin.(*Context).Next(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x1400012aea0, 0x140001ec100)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x36c
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x1400012aea0, {0x1052de9d8, 0x14000164460}, 0x140001a88c0)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0xc0
+net/http.serverHandler.ServeHTTP({0x140001fe000}, {0x1052de9d8, 0x14000164460}, 0x140001a88c0)
+	/usr/local/go/src/net/http/server.go:3210 +0x2b0
+net/http.(*conn).serve(0x140001782d0, {0x1052df3d8, 0x14000162780})
+	/usr/local/go/src/net/http/server.go:2092 +0x1604
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x88c
+
