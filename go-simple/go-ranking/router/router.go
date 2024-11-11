@@ -26,6 +26,8 @@ func Router() *gin.Engine {
 		userGroup.GET("/delete", controller.UserControllerStruct{}.DelUser)
 
 		userGroup.PUT("/put", controller.UserControllerStruct{}.UpdateUser)
+
+		userGroup.GET("/getList", controller.UserControllerStruct{}.GetList)
 	}
 
 	// 获取请求参数示例
