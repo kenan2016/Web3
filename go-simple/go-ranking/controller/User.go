@@ -1,70 +1,72 @@
 package controller
 
 import (
+	"github.com/gin-contrib/sessions"
 	"github.com/gin-gonic/gin"
 	"go-ranking/common"
 	"go-ranking/models"
-	"go-ranking/pkg/logger"
 	"strconv"
 )
 
 type UserControllerStruct struct {
 }
 
-func (u UserControllerStruct) GetUserInfo(c *gin.Context) {
-	var idStr = c.PostForm("id")
-	id, _ := strconv.Atoi(idStr)
-	user, _ := models.User{}.GetTest(id)
-	common.Succeed(1, c, user, 1, "获取用户信息成功")
-}
+func (us UserControllerStruct) Register(c *gin.Context) {
+	username := c.PostForm("username")
+	password := c.PostForm("password")
+	rePassword := c.PostForm("rePassword")
+	if username == "" || password == "" || rePassword == "" {
+		common.Failed(1, c, "username or password is empty")
+		return
+	}
 
-func (u UserControllerStruct) CreateUser(context *gin.Context) {
-	logger.Write("这是一个手动输出", "test")
-	//defer func() {
-	//	if err := recover(); err != nil {
-	//		common.Failed(4004, context, err)
-	//	}
-	//}()
-	//num1 := 1
-	//num2 := 0
-	//num3 := num1 / num2
-	//fmt.Println(num3)
-	username := context.DefaultPostForm("username", "")
-	id, err := models.User{}.AddUser(username)
+	//检验用户名是否存在
+	user, err := models.User{}.GetUserByUsername(username)
 	if err != nil {
-		common.Failed(0, context, "用户创建失败")
+		common.Failed(1, c, "register failed")
+		return
 	}
-	common.Succeed(1, context, id, 1, "用户创建成功")
-}
-
-func (u UserControllerStruct) DelUser(context *gin.Context) {
-	idStr := context.DefaultPostForm("id", "")
-	id, _ := strconv.Atoi(idStr)
-	_, err := models.User{}.DelUser(id)
+	if user.Id != 0 {
+		common.Failed(1, c, "register failed,user exist")
+		return
+	}
+	u, err := models.User{}.AddUser(username, password)
 	if err != nil {
-		common.Failed(0, context, "用户删除失败")
+		common.Failed(1, c, "register failed")
+		return
 	}
-	common.Succeed(1, context, nil, 1, "用户删除成功")
+	common.Succeed(1, c, u.Id, 1, "注册成功")
 }
 
-func (u UserControllerStruct) UpdateUser(context *gin.Context) {
-	username := context.DefaultPostForm("username", "")
-	idStr := context.DefaultPostForm("id", "")
-	id, _ := strconv.Atoi(idStr)
-	user := models.User{Id: id, Username: username}
-	err := models.User{}.UpdateUser(&user)
-	if err == nil {
-		common.Succeed(1, context, nil, 1, "用户更新成功")
+func (us UserControllerStruct) Login(c *gin.Context) {
+	username := c.PostForm("username")
+	password := c.PostForm("password")
+	if username == "" || password == "" {
+		common.Failed(1, c, "username or password is empty")
+		return
 	}
-	common.Failed(0, context, "用户删除失败")
-}
-
-func (u UserControllerStruct) GetList(context *gin.Context) {
-	idStr := context.DefaultPostForm("id", "")
-	id, _ := strconv.Atoi(idStr)
-	err, users := models.User{}.GetList(id)
+	//检验用户名是否存在
+	user, err := models.User{}.GetUserByUsername(username)
 	if err != nil {
-		common.Failed(0, context, "获取用户列表失败")
+		common.Failed(1, c, "login failed")
+		return
 	}
-	common.Succeed(1, context, users, int64(len(users)), "获取用户列表成功")
+	if user.Id == 0 {
+		common.Failed(1, c, "login failed,user not exist")
+		return
+	}
+	if user.Password != common.EncryMd5(password) {
+		common.Failed(1, c, "login failed,password error")
+		return
+	}
+	// 记录用户 信息到session
+	session := sessions.Default(c)
+	session.Set("login:"+strconv.Itoa(user.Id), user.Id)
+	session.Save()
+	userApi := models.UserApi{Id: user.Id, Username: user.Username}
+	common.Succeed(1, c, userApi, 1, "登录成功")
+}
+
+func (us UserControllerStruct) TestRedisCli(context *gin.Context) {
+	models.TestRedisCli()
 }
