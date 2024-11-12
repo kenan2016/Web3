@@ -1,6 +1,8 @@
 package common
 
 import (
+	"crypto/md5"
+	"encoding/hex"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )
@@ -26,6 +28,12 @@ func Succeed(code int, c *gin.Context, data interface{}, count int64, msg interf
 func Failed(code int, c *gin.Context, msg interface{}) {
 	json := &ErrorStruct{code, msg}
 	c.JSON(http.StatusOK, json)
+}
+
+func EncryMd5(s string) string {
+	ctx := md5.New()
+	ctx.Write([]byte(s))
+	return hex.EncodeToString(ctx.Sum(nil))
 }
 
 //func Demo(code int, c *gin.Context, msg interface{}) {

@@ -1,0 +1,310 @@
+panic error time:2024-11-12 17:21:55
+dial tcp: lookup 127.0.0.0.1: no such host
+stacktrace from panic:goroutine 25 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+go-ranking/pkg/logger.Recover.func1()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:138 +0x424
+panic({0x1036825a0?, 0x140001cb900?})
+	/usr/local/go/src/runtime/panic.go:785 +0xf0
+go-ranking/models.TestRedisCli()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/models/user.go:43 +0xc4
+go-ranking/controller.UserControllerStruct.TestRedisCli({}, 0x14000242300)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/controller/User.go:71 +0x20
+github.com/gin-gonic/gin.(*Context).Next(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-contrib/sessions.Sessions.func1(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-contrib/sessions@v1.0.1/sessions.go:54 +0x270
+github.com/gin-gonic/gin.(*Context).Next(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+go-ranking/pkg/logger.Recover(0x14000242300)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:148 +0x8c
+github.com/gin-gonic/gin.(*Context).Next(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x10c
+github.com/gin-gonic/gin.(*Context).Next(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140000c0ea0, 0x14000242300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x36c
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140000c0ea0, {0x103721458, 0x140001302a0}, 0x1400023e780)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0xc0
+net/http.serverHandler.ServeHTTP({0x1400013ce10}, {0x103721458, 0x140001302a0}, 0x1400023e780)
+	/usr/local/go/src/net/http/server.go:3210 +0x2b0
+net/http.(*conn).serve(0x140000fcab0, {0x1037221f8, 0x140001cb4f0})
+	/usr/local/go/src/net/http/server.go:2092 +0x1604
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x88c
+
+panic error time:2024-11-12 17:57:06
+runtime error: invalid memory address or nil pointer dereference
+stacktrace from panic:goroutine 6 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+go-ranking/pkg/logger.Recover.func1()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:138 +0x424
+panic({0x104a8bae0?, 0x104e80c90?})
+	/usr/local/go/src/runtime/panic.go:785 +0xf0
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).waitTurn(0x1400017a6c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:304 +0x34
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).Get(0x1400017a6c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:264 +0x84
+github.com/redis/go-redis/v9.(*baseClient)._getConn(0x1400023c9c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:260 +0x5c
+github.com/redis/go-redis/v9.(*baseClient).getConn(0x1400023c9c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:248 +0xc4
+github.com/redis/go-redis/v9.(*baseClient).withConn(0x1400023c9c0, {0x0, 0x0}, 0x14000348820)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:381 +0x4c
+github.com/redis/go-redis/v9.(*baseClient)._process(0x1400023c9c0, {0x0, 0x0}, {0x104b505d8, 0x14000308700}, 0x0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:436 +0x1a4
+github.com/redis/go-redis/v9.(*baseClient).process(0x1400023c9c0, {0x0, 0x0}, {0x104b505d8, 0x14000308700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:405 +0x8c
+github.com/redis/go-redis/v9.(*hooksMixin).processHook(0x1400025dcf0, {0x0, 0x0}, {0x104b505d8, 0x14000308700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:185 +0x54
+github.com/redis/go-redis/v9.(*Client).Process(0x1400025dce0, {0x0, 0x0}, {0x104b505d8, 0x14000308700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:697 +0x54
+github.com/redis/go-redis/v9.cmdable.Set(0x14000258bf0, {0x0, 0x0}, {0x10497a7bd, 0x4}, {0x104a5e820, 0x104b481f0}, 0x186a0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/string_commands.go:182 +0x450
+go-ranking/models.TestRedisCli()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/models/user.go:41 +0x64
+go-ranking/controller.UserControllerStruct.TestRedisCli({}, 0x14000340000)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/controller/User.go:71 +0x20
+github.com/gin-gonic/gin.(*Context).Next(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-contrib/sessions.Sessions.func1(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-contrib/sessions@v1.0.1/sessions.go:54 +0x270
+github.com/gin-gonic/gin.(*Context).Next(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+go-ranking/pkg/logger.Recover(0x14000340000)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:148 +0x8c
+github.com/gin-gonic/gin.(*Context).Next(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x10c
+github.com/gin-gonic/gin.(*Context).Next(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x14000312000, 0x14000340000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x36c
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x14000312000, {0x104b4d458, 0x140003100e0}, 0x14000332000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0xc0
+net/http.serverHandler.ServeHTTP({0x14000322000}, {0x104b4d458, 0x140003100e0}, 0x14000332000)
+	/usr/local/go/src/net/http/server.go:3210 +0x2b0
+net/http.(*conn).serve(0x14000318120, {0x104b4e1f8, 0x1400003ea50})
+	/usr/local/go/src/net/http/server.go:2092 +0x1604
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x88c
+
+panic error time:2024-11-12 17:57:26
+runtime error: invalid memory address or nil pointer dereference
+stacktrace from panic:goroutine 18 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+go-ranking/pkg/logger.Recover.func1()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:138 +0x424
+panic({0x102c57ae0?, 0x10304cc90?})
+	/usr/local/go/src/runtime/panic.go:785 +0xf0
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).waitTurn(0x140001747e0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:304 +0x34
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).Get(0x140001747e0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:264 +0x84
+github.com/redis/go-redis/v9.(*baseClient)._getConn(0x140002109c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:260 +0x5c
+github.com/redis/go-redis/v9.(*baseClient).getConn(0x140002109c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:248 +0xc4
+github.com/redis/go-redis/v9.(*baseClient).withConn(0x140002109c0, {0x0, 0x0}, 0x1400030a820)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:381 +0x4c
+github.com/redis/go-redis/v9.(*baseClient)._process(0x140002109c0, {0x0, 0x0}, {0x102d1c5d8, 0x140002c4700}, 0x0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:436 +0x1a4
+github.com/redis/go-redis/v9.(*baseClient).process(0x140002109c0, {0x0, 0x0}, {0x102d1c5d8, 0x140002c4700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:405 +0x8c
+github.com/redis/go-redis/v9.(*hooksMixin).processHook(0x1400022dcf0, {0x0, 0x0}, {0x102d1c5d8, 0x140002c4700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:185 +0x54
+github.com/redis/go-redis/v9.(*Client).Process(0x1400022dce0, {0x0, 0x0}, {0x102d1c5d8, 0x140002c4700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:697 +0x54
+github.com/redis/go-redis/v9.cmdable.Set(0x14000228c30, {0x0, 0x0}, {0x102b467bd, 0x4}, {0x102c2a820, 0x102d141f0}, 0x186a0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/string_commands.go:182 +0x450
+go-ranking/models.TestRedisCli()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/models/user.go:41 +0x64
+go-ranking/controller.UserControllerStruct.TestRedisCli({}, 0x14000302000)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/controller/User.go:71 +0x20
+github.com/gin-gonic/gin.(*Context).Next(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-contrib/sessions.Sessions.func1(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-contrib/sessions@v1.0.1/sessions.go:54 +0x270
+github.com/gin-gonic/gin.(*Context).Next(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+go-ranking/pkg/logger.Recover(0x14000302000)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:148 +0x8c
+github.com/gin-gonic/gin.(*Context).Next(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x10c
+github.com/gin-gonic/gin.(*Context).Next(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140002d4000, 0x14000302000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x36c
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140002d4000, {0x102d19458, 0x140002d20e0}, 0x140002f2000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0xc0
+net/http.serverHandler.ServeHTTP({0x140002e8000}, {0x102d19458, 0x140002d20e0}, 0x140002f2000)
+	/usr/local/go/src/net/http/server.go:3210 +0x2b0
+net/http.(*conn).serve(0x140002de120, {0x102d1a1f8, 0x140002be9b0})
+	/usr/local/go/src/net/http/server.go:2092 +0x1604
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x88c
+
+panic error time:2024-11-12 17:59:06
+runtime error: invalid memory address or nil pointer dereference
+stacktrace from panic:goroutine 18 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+go-ranking/pkg/logger.Recover.func1()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:138 +0x424
+panic({0x10487bae0?, 0x104c70c90?})
+	/usr/local/go/src/runtime/panic.go:785 +0xf0
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).waitTurn(0x14000174750, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:304 +0x34
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).Get(0x14000174750, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:264 +0x84
+github.com/redis/go-redis/v9.(*baseClient)._getConn(0x140002109e0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:260 +0x5c
+github.com/redis/go-redis/v9.(*baseClient).getConn(0x140002109e0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:248 +0xc4
+github.com/redis/go-redis/v9.(*baseClient).withConn(0x140002109e0, {0x0, 0x0}, 0x140000fe820)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:381 +0x4c
+github.com/redis/go-redis/v9.(*baseClient)._process(0x140002109e0, {0x0, 0x0}, {0x1049405d8, 0x140000b0700}, 0x0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:436 +0x1a4
+github.com/redis/go-redis/v9.(*baseClient).process(0x140002109e0, {0x0, 0x0}, {0x1049405d8, 0x140000b0700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:405 +0x8c
+github.com/redis/go-redis/v9.(*hooksMixin).processHook(0x1400022dcf0, {0x0, 0x0}, {0x1049405d8, 0x140000b0700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:185 +0x54
+github.com/redis/go-redis/v9.(*Client).Process(0x1400022dce0, {0x0, 0x0}, {0x1049405d8, 0x140000b0700})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:697 +0x54
+github.com/redis/go-redis/v9.cmdable.Set(0x14000228c40, {0x0, 0x0}, {0x10476a7bd, 0x4}, {0x10484e820, 0x1049381f0}, 0x186a0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/string_commands.go:182 +0x450
+go-ranking/models.TestRedisCli()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/models/user.go:41 +0x64
+go-ranking/controller.UserControllerStruct.TestRedisCli({}, 0x140000f6000)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/controller/User.go:71 +0x20
+github.com/gin-gonic/gin.(*Context).Next(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-contrib/sessions.Sessions.func1(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-contrib/sessions@v1.0.1/sessions.go:54 +0x270
+github.com/gin-gonic/gin.(*Context).Next(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+go-ranking/pkg/logger.Recover(0x140000f6000)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:148 +0x8c
+github.com/gin-gonic/gin.(*Context).Next(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x10c
+github.com/gin-gonic/gin.(*Context).Next(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x140000c0000, 0x140000f6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x36c
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x140000c0000, {0x10493d458, 0x140000be0e0}, 0x140000e6000)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0xc0
+net/http.serverHandler.ServeHTTP({0x140000d4000}, {0x10493d458, 0x140000be0e0}, 0x140000e6000)
+	/usr/local/go/src/net/http/server.go:3210 +0x2b0
+net/http.(*conn).serve(0x140000ca120, {0x10493e1f8, 0x140000aa9b0})
+	/usr/local/go/src/net/http/server.go:2092 +0x1604
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x88c
+
+panic error time:2024-11-12 18:02:11
+runtime error: invalid memory address or nil pointer dereference
+stacktrace from panic:goroutine 10 [running]:
+runtime/debug.Stack()
+	/usr/local/go/src/runtime/debug/stack.go:26 +0x64
+go-ranking/pkg/logger.Recover.func1()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:138 +0x424
+panic({0x1027bfae0?, 0x102bb4c90?})
+	/usr/local/go/src/runtime/panic.go:785 +0xf0
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).waitTurn(0x140001386c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:304 +0x34
+github.com/redis/go-redis/v9/internal/pool.(*ConnPool).Get(0x140001386c0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/internal/pool/pool.go:264 +0x84
+github.com/redis/go-redis/v9.(*baseClient)._getConn(0x140002109e0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:260 +0x5c
+github.com/redis/go-redis/v9.(*baseClient).getConn(0x140002109e0, {0x0, 0x0})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:248 +0xc4
+github.com/redis/go-redis/v9.(*baseClient).withConn(0x140002109e0, {0x0, 0x0}, 0x14000306820)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:381 +0x4c
+github.com/redis/go-redis/v9.(*baseClient)._process(0x140002109e0, {0x0, 0x0}, {0x1028845d8, 0x14000256a80}, 0x0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:436 +0x1a4
+github.com/redis/go-redis/v9.(*baseClient).process(0x140002109e0, {0x0, 0x0}, {0x1028845d8, 0x14000256a80})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:405 +0x8c
+github.com/redis/go-redis/v9.(*hooksMixin).processHook(0x1400022dcf0, {0x0, 0x0}, {0x1028845d8, 0x14000256a80})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:185 +0x54
+github.com/redis/go-redis/v9.(*Client).Process(0x1400022dce0, {0x0, 0x0}, {0x1028845d8, 0x14000256a80})
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/redis.go:697 +0x54
+github.com/redis/go-redis/v9.cmdable.Set(0x14000228c40, {0x0, 0x0}, {0x1026ae7bd, 0x4}, {0x102792820, 0x10287c1f0}, 0x186a0)
+	/Users/nanke/go/pkg/mod/github.com/redis/go-redis/v9@v9.7.0/string_commands.go:182 +0x450
+go-ranking/models.TestRedisCli()
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/models/user.go:41 +0x64
+go-ranking/controller.UserControllerStruct.TestRedisCli({}, 0x14000254300)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/controller/User.go:71 +0x20
+github.com/gin-gonic/gin.(*Context).Next(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-contrib/sessions.Sessions.func1(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-contrib/sessions@v1.0.1/sessions.go:54 +0x270
+github.com/gin-gonic/gin.(*Context).Next(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+go-ranking/pkg/logger.Recover(0x14000254300)
+	/Users/nanke/workSpace/Web3/go-simple/go-ranking/pkg/logger/logger.go:148 +0x8c
+github.com/gin-gonic/gin.(*Context).Next(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.CustomRecoveryWithWriter.func1(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/recovery.go:102 +0x10c
+github.com/gin-gonic/gin.(*Context).Next(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.LoggerWithConfig.func1(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/logger.go:249 +0xbc
+github.com/gin-gonic/gin.(*Context).Next(0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/context.go:185 +0xa0
+github.com/gin-gonic/gin.(*Engine).handleHTTPRequest(0x1400011aea0, 0x14000254300)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:633 +0x36c
+github.com/gin-gonic/gin.(*Engine).ServeHTTP(0x1400011aea0, {0x102881458, 0x140001782a0}, 0x14000250780)
+	/Users/nanke/go/pkg/mod/github.com/gin-gonic/gin@v1.10.0/gin.go:589 +0xc0
+net/http.serverHandler.ServeHTTP({0x14000184e10}, {0x102881458, 0x140001782a0}, 0x14000250780)
+	/usr/local/go/src/net/http/server.go:3210 +0x2b0
+net/http.(*conn).serve(0x14000138ab0, {0x1028821f8, 0x14000213400})
+	/usr/local/go/src/net/http/server.go:2092 +0x1604
+created by net/http.(*Server).Serve in goroutine 1
+	/usr/local/go/src/net/http/server.go:3360 +0x88c
+
