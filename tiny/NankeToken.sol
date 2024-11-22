@@ -13,6 +13,6 @@ contract NanKeToken is ERC20 {
 
        constructor() ERC20("nankeToken","nkt"){
         // 初始发行 100000 个 Token，注意将数量转换为带 18 位小数的格式
-        _mint(msg.sender, 100000*10*decimals());
+        _mint(msg.sender, 100000*10**decimals());
     }
 }
