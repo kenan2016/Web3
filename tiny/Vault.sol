@@ -11,9 +11,9 @@ contract Vault{
     mapping(address => uint256) public balances; // 用户存款记录
 
     constructor(address _tokenAddress) {
-        token = IERC20(_tokenAddress); // 初始化 Token 地址
+        token = IERC20(_tokenAddress); // 初始化 Token 地址 指 代币 NanKeToken地址
     }
-    
+
         // 存款方法
     function deposit(uint256 _amount) external {
         require(_amount > 0, "Deposit amount must be greater than zero");
@@ -21,7 +21,7 @@ contract Vault{
         // 从用户地址转移 Token 到合约
         token.transferFrom(msg.sender, address(this), _amount);
         
-        // 更新用户的存款余额
+        // 更新用户（现实中指metamask，开发中指remix deploy 页面左上角的Account）的存款余额
         balances[msg.sender] = balances[msg.sender].add(_amount);
     }
 

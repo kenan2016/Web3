@@ -422,7 +422,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tiny/NankeToken.sol": "NanKeToken"
+			"tiny/Kenan2016Token.sol": "Kenan2016"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -476,12 +476,12 @@
 				"dweb:/ipfs/Qmax9WHBnVsZP46ZxEMNRQpLQnrdE4dK8LehML1Py8FowF"
 			]
 		},
-		"tiny/NankeToken.sol": {
-			"keccak256": "0x2da98da45b8ebf9757172fc9106e6d88e4152872d7ba650888b84db171357402",
+		"tiny/Kenan2016Token.sol": {
+			"keccak256": "0xf11a0656016d54f8757d9a6330c1633a9e1838266d4b169de928d1e702753029",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://36546b0c908a86f9e507098a531d74ea623fbb7af0599c2ba7c1f82f16cf5aff",
-				"dweb:/ipfs/QmNf7yiNc1W44VRz4Ua2Cm2wspBZ6Ly1LSWbQAw2hXdNHp"
+				"bzz-raw://3460102564702b3acebf19c648b350883e053fd545e463d5d487ba7fbeefbcab",
+				"dweb:/ipfs/QmRko43ZDjjsFPkrRyentzfwKBt8jk8xp9kaujt83a74iy"
 			]
 		}
 	},
