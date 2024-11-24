@@ -17,7 +17,7 @@ contract TokenBank {
         token = IERC20(tokenAddr);
     }
 
-    // 存款
+    // 存
     function deposit(uint256 amount) external {
         require(amount>0,  "token amou must be more than zero");
         //更新用户存款
@@ -26,7 +26,7 @@ contract TokenBank {
         token.transferFrom(msg.sender, address(this), amount);
     }
 
-    //取款
+    //取
     function withdraw(uint256 amount) external {
         uint256 balance = user_tokens[msg.sender];
         require(balance > amount,"not enough balance");
