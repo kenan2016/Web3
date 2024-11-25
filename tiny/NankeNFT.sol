@@ -9,7 +9,6 @@ contract NankeNFT is ERC721URIStorage{
     uint256 private _currentNFTId;
     //部署后创建一个 NKNFT
     constructor() ERC721("Nanke NFT", "NKNFT") {
-        
     }
 
     // 铸造 NFT 方法 ：用来给每个 address 铸造一个NFT,返回 nftID
@@ -19,7 +18,6 @@ contract NankeNFT is ERC721URIStorage{
          _mint(to, newNFTId);
          _setTokenURI(newNFTId, tokenURI);
         return newNFTId;
-
     } 
 
 }

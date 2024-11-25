@@ -1,0 +1,19 @@
+{
+  "name": "GaoYuanyuan NFT",
+  "description": "This is GaoYuanyuan NFT, a unique coder.",
+  "image": "ipfs://QmXGcUVAQJ6kLSMonRNGig3pjNwtL6uokDLMJLN2Ypwnes", 
+  "attributes": [
+    {
+      "trait_type": "name",
+      "value": "GaoYuanyuan"
+    },
+    {
+      "trait_type": "age",
+      "value": "18"
+    },
+    {
+      "trait_type": "profession",
+      "value": "actor"
+    }
+  ]
+}

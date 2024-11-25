@@ -91,7 +91,7 @@
 			},
 			{
 				"inputs": [],
-				"name": "tokeContract",
+				"name": "tokenContract",
 				"outputs": [
 					{
 						"internalType": "contract IERC20",
@@ -155,11 +155,11 @@
 			]
 		},
 		"tiny/NFTMarket.sol": {
-			"keccak256": "0x779d78717fc112a35e7872ce44b0a40bb25ebee143d9b1fb13cdcf5fcd8e52b6",
+			"keccak256": "0xf5f5b41e1dbedb21d6178e945d71a56a1f8b79b562fe6fedb66d2ce75f763c35",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://486ef2a132d3d593186a272ca4216e71785e6957cfdf3e892eca1e04769c1f33",
-				"dweb:/ipfs/Qmd8r8QTvkmiEiZVP7T2NqBN2uyqUFBDAxHUEfBDRej52b"
+				"bzz-raw://11e36f250d0902a9834149eee84b834b1a589c228b37b79a27a2f0386bb65a74",
+				"dweb:/ipfs/QmUuYwBKWEmABkVKDbpM1CRKx1fxRaCejpuWT19qo2i89f"
 			]
 		}
 	},

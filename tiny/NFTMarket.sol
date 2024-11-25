@@ -20,7 +20,7 @@ contract NFTMarket{
     //因为 需要操作这两个合约实现nft转移，和 Token的转移
     constructor(address nftAddress,address tokenAddress){
        nftContract = IERC721(nftAddress); 
-       tokeContract=IERC20(tokenAddress);
+       tokenContract = IERC20(tokenAddress);
     }
 
     // 上架NFT
