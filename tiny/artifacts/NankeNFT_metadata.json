@@ -798,11 +798,11 @@
 			]
 		},
 		"tiny/NankeNFT.sol": {
-			"keccak256": "0x15b49ab7e49fcfcd0e62b894bc9ad76b55f78b32e367b0b8a7a3ae632097c12d",
+			"keccak256": "0x572cafedeec34507b0fc4fd2bfe7cc071eae6bd5b14a1b8270e57f0d12d49d05",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://fd365584407930a1dd3be09cb87bdc4b4bdf0b586a5e5079bd73e3d656a18548",
-				"dweb:/ipfs/QmfJZUo8mv9pxcb5wpJKgHTgoHgGggf9xFfaAJV5jdAQTK"
+				"bzz-raw://020782dfb6db6053e1fe8c02594f7c5bce161230c242781beb817195cb11c643",
+				"dweb:/ipfs/QmZ35Nqe7DwR6Lr1SHA8R2RqbWQ8qUc6vCvASDues5EBq5"
 			]
 		}
 	},

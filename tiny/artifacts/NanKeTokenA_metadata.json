@@ -477,11 +477,11 @@
 			]
 		},
 		"tiny/NanKeTokenA.sol": {
-			"keccak256": "0x9d2b23a0f650a2b127ade39d98005f1647d3d861d1535a870e23d2ee7e581598",
+			"keccak256": "0xc79e8fc6402f6d980431c9d19cb24366ab5e7001103c84a9c93d57713c41e338",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://a39b625898176deab17f63c56f652420103d9974f23c0b516a76adc77b2be8d9",
-				"dweb:/ipfs/QmXGt6dTdzyE1geZSEtGVNHgV1eEFvVvbyx4pj75jPMVEj"
+				"bzz-raw://f5e19e6dbae75d5d3bbe592c6aa27e0ccdd3c9dff106d2aacb2127ebde29271d",
+				"dweb:/ipfs/QmUtZe2ybbWJXbRaR7eBasaWYq8z96C4xetRppdKThPEed"
 			]
 		}
 	},

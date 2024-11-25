@@ -8,4 +8,3 @@ contract NanKeTokenA is ERC20 {
         _mint(msg.sender, 100000 * 10 ** decimals());
     }
 }
-
