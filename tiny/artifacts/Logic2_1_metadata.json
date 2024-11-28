@@ -65,7 +65,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"tiny/Logic2_1.sol": "Logic2"
+			"tiny/Logic2_1.sol": "Logic2_1"
 		},
 		"evmVersion": "cancun",
 		"libraries": {},
@@ -80,11 +80,11 @@
 	},
 	"sources": {
 		"tiny/Logic2_1.sol": {
-			"keccak256": "0xb37853245eedbb89e283c05f898deb4c73c9e7dddaa9674d5d44b385804cca71",
+			"keccak256": "0xcbe905dd852eb74777a11e2ba7be0cd4c91457e97b69c97b123886427a423864",
 			"license": "MIT",
 			"urls": [
-				"bzz-raw://72e8b85abdbac50bb5c4ce85a1a638153e47edb8fbf6727015158f589fe1f69d",
-				"dweb:/ipfs/QmcJJjGGvGi7yxadjv5BDM6MeEz4MxWfDijwp7r1qS1aZE"
+				"bzz-raw://ed4c397aae9955f83c0dd2b645661c27433143be1789e9b3ccaf5c945b6ed093",
+				"dweb:/ipfs/QmUwSpkSGzYWKA9FrX8Zd3Maeq8s81xCSZ6qxQwnGrHidN"
 			]
 		}
 	},
